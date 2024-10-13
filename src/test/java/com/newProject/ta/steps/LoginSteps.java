@@ -86,7 +86,7 @@ public class LoginSteps {
 
 
     @When("user click on the {string} link")
-    public void user_click_on_the_link(String string) {
+    public void user_click_on_the_link(String st) {
         lp.clickOnForgottenPassword();
 
     }
