@@ -1,4 +1,4 @@
-#trial to test git
+
 Feature: Login functionality of Open Cart gitecoomerce
   As a user of open cart Website
   I want to login with my email id

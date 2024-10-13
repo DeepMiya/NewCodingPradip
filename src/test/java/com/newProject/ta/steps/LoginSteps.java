@@ -94,8 +94,5 @@ public class LoginSteps {
     @Then("user should be redirected to password reset page")
     public void user_should_be_redirected_to_password_reset_page() {
         Assert.assertTrue(lp.getForgotPasswordUrl().contains("account/forgotton"));
-
-        System.out.println("Test---Demo");
-
     }
 }
