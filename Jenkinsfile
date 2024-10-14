@@ -2,12 +2,20 @@ pipeline{
 agent any
 stages
 {
- stage('Checkout') {
-            steps {
-                checkout scm // Checkout the code from Git
-            }
-        }
-        stage('Verify POM') {
+ stages {
+         stage('Checkout') {
+             steps {
+                 script {
+//                  checkout scm // checkout code from scm
+                     // Checkout the specified branch using this we will override the url and branch given by the scm option
+                     checkout([$class: 'GitSCM',
+                         branches: [[name: "${params.BRANCH_NAME}"]],
+                         userRemoteConfigs: [[url: 'https://github.com/DeepMiya/NewCodingPradip.git']]
+                     ])
+                 }
+             }
+         }
+ stage('Verify POM') {
             steps {
                 script {
                     // Print current directory and list files
@@ -26,8 +34,10 @@ bat "mvn clean"
 stage('Test')
 {
 steps{
-echo "Testing the code"
-bat "mvn test"
+script {
+                    echo "Running tests with tag: @${params.CUCUMBERTAGS}"
+                    bat "mvn test -Dcucumber.filter.tags='${params.CUCUMBERTAGS}'"
+                }
 }
 }
 stage('Compile')
