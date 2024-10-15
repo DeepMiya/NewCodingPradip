@@ -32,7 +32,7 @@ pipeline {
                     steps {
                         script {
                             echo "Verifying tests with tag: @${params.CUCUMBERTAGS}"
-                            bat "mvn test -Dcucumber.options='--dry-run --tags @${params.CUCUMBERTAGS}'"
+                           bat "mvn test -Dcucumber.filter.tags='@${params.CUCUMBERTAGS}' -Dcucumber.options='--dry-run'"
                         }
                     }
                 }
