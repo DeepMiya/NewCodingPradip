@@ -120,6 +120,11 @@
         <!--
         https://mvnrepository.com/artifact/net.masterthought/cucumber-reporting -->
         <!-- Cucumber Reporting Plugin -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>1.7.32</version> <!-- or any compatible version -->
+        </dependency>
 
     </dependencies>
 
