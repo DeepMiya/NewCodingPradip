@@ -28,6 +28,14 @@ pipeline {
                 bat "mvn clean"
             }
         }
+        stage('Dry Run Tests') { // New stage for dry run
+                    steps {
+                        script {
+                            echo "Verifying tests with tag: @${params.CUCUMBERTAGS}"
+                            bat "mvn test -Dcucumber.options='--dry-run --tags @${params.CUCUMBERTAGS}'"
+                        }
+                    }
+                }
         stage('Test') {
             steps {
                 script {
