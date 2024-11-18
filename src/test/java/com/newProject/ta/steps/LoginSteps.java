@@ -23,10 +23,10 @@ public class LoginSteps {
     public void setUp()
     {
         System.setProperty("webdriver.driver.edge", "C:\\\\Drivers\\\\edgedriver_win64 (1)\\\\msedgedriver.exe");
-        //driver=new EdgeDriver();
-        EdgeOptions options = new EdgeOptions();
+        driver=new EdgeDriver();
+        //EdgeOptions options = new EdgeOptions();
         // options.addArguments("--headless");  // Remove or comment out this line to run in non-headless mode
-        driver = new EdgeDriver(options);
+        //driver = new EdgeDriver(options);
 
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
