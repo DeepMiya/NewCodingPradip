@@ -16,6 +16,17 @@ public class PalendromString {
         }
         else
         {
-            System.out.println("non pallendrom") ;       }
+            System.out.println("non pallendrom") ;
+        }
+        //another way
+        StringBuilder sb= new StringBuilder(name);
+        String revStr=sb.reverse().toString();
+        if (name.equals(revStr))
+        {
+            System.out.println("its a pallendrom string");
+        }else{
+            System.out.println("Non Pallendrom");
+        }
+
     }
 }
