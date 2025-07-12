@@ -24,6 +24,6 @@ public class wovelsFromString {
                }
            }
 
-       }System.out.println("Wovels:"+wovels+"consonant:"+consonant);
+       }System.out.println("Wovels :"+wovels+"consonant:"+consonant);
     }
 }

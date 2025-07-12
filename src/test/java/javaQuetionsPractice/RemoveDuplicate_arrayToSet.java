@@ -19,6 +19,17 @@ public class RemoveDuplicate_arrayToSet {
         //   System.out.println(s);
        }
 
+       ///Another way
+        String sentence = "my name is pradip pawar and pawar is my sir name";
+        String [] strarr=sentence.split(" ");
+        Set<String> uniqString=new HashSet<>();
+
+        for (String s:strarr)
+        {
+            uniqString.add(s);
+        }
+        System.out.println(uniqString);
+
 
     }
 

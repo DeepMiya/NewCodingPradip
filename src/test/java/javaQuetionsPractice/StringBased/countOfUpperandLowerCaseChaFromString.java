@@ -1,4 +1,4 @@
-package javaQuetionsPractice;
+package javaQuetionsPractice.StringBased;
 
 public class countOfUpperandLowerCaseChaFromString {
 
