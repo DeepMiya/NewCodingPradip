@@ -44,7 +44,7 @@ public class countBooksElementsOnScrollingPage {
             Thread.sleep(5000);
 
         }
-        System.out.println(currentcount);
+        System.out.println("Total Count is "+ currentcount);
         driver.quit();
 
 
