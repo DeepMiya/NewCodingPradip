@@ -6,8 +6,8 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions
-        (features="src/test/resources/features",
-                glue="com.newProject.ta.steps",
+        (features="C:\\Intellij\\NewProject\\src\\test\\resources\\features\\openCartLogin.feature",
+                glue="C:\\Intellij\\NewProject\\src\\test\\java\\com\\newProject\\ta\\steps",
                 stepNotifications = true,
                 tags = "(@Valid)",
                 dryRun=true,

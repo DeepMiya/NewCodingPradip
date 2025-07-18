@@ -1,0 +1,22 @@
+Sort in Java
+----------------------------------------------------------------------------------------
+Selenium Link_
+https://naveenautomationlabs.com/tag/selenium/
+
+
+1)Arrays.sort() – For Arrays (Primitive & Object)
+int[] arr = {5, 2, 8, 1};
+Arrays.sort(arr);  // Sorts in ascending order
+
+For objects in descending order:
+Integer[] arr = {5, 2, 8, 1};
+//Collections.reverseOrder() only works with object types, not primitives.
+//So use Integer[] instead of int[].
+Arrays.sort(arr, Collections.reverseOrder());
+
+2)Collections.sort() – For Lists
+List<String> list = Arrays.asList("Banana", "Apple", "Mango");
+Collections.sort(list);  // Ascending
+Collections.sort(list, Collections.reverseOrder());  // Descending
+
+

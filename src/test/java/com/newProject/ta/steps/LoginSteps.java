@@ -15,7 +15,7 @@ import org.openqa.selenium.edge.EdgeOptions;
 import java.util.concurrent.TimeUnit;
 
 public class LoginSteps {
-    WebDriver driver;
+    public WebDriver driver;
     public ComopencartLoginPage lp;
     private boolean expected;
 

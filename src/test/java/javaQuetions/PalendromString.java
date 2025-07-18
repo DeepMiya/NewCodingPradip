@@ -17,6 +17,17 @@ public class PalendromString {
         else
         {System.out.println("Its not a pallendrom");
         }
-
+        /*
+        //2nd way
+        String name="madam";
+        StringBuilder sb=new StringBuilder(name);
+        String revName=sb.reverse().toString();()
+        System.out.println(sb.reverse().toString());
+        if (name.equals(revName))
+        {
+            System.out.println("Its Pallendrom String");
+        }
+        else (System.out.println("Its not pellendrom"));
+*/
     }
 }

@@ -12,7 +12,13 @@ public class characterCount {
         {
             if (c!=' ')
             {
-                mpcount.put(c, mpcount.getOrDefault(c,0)+1);
+                mpcount.put(c, mpcount.getOrDefault(c,0)+1); /*
+
+                getOrDefault(Object key, V defaultValue)
+key – The key to look up in the map
+
+defaultValue – The value to return if the key is not found */
+
             }
         }System.out.println(mpcount);
     }
