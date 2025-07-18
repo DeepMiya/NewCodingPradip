@@ -1,4 +1,4 @@
-package javaQuetionsPractice;
+package javaQuetionsPractice.StringBased;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -19,9 +19,15 @@ public class Duplicate_String_With_Count {
             if (!uniqString.add(s))
             {
                 duplicateString.put(s,duplicateString.getOrDefault(s,1)+1);
+                /*
+                getOrDefault(Object key, V defaultValue)
+                key – The key to look up in the map
+               defaultValue – The value to return if the key is not found
+                it helps to avoid null when a key is missing by returning a default value instead.
+                 */
             }
         }
-        System.out.println(duplicateString);
+        System.out.println("Duplicates:"+duplicateString);//duplicate
 
 
     }

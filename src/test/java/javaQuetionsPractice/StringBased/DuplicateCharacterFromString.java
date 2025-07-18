@@ -1,4 +1,4 @@
-package javaQuetionsPractice;
+package javaQuetionsPractice.StringBased;
 
 import java.util.HashSet;
 import java.util.Set;

@@ -4,7 +4,7 @@ public class MinimumOfArray {
     public static void main(String [] args)
     {
         int []numbers={5,6,8,2,5,1};
-        int min=numbers[0];
+        int min=numbers[0]; //initial element is min
         for(int a:numbers)
         {
             if(a<min) min=a;
