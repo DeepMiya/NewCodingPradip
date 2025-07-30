@@ -1,0 +1,35 @@
+
+
+Selenium
+dumy websites :-
+https://rahulshettyacademy.com/dropdownsPractise/
+https://rahulshettyacademy.com/locatorspractice/
+https://rahulshettyacademy.com/dropdownsPractise/
+https://testpages.eviltester.com/
+
+Syncronisation
+1) Implicit Wait
+-->applied Globally for all drivers in program
+Cons: Performance cause issues are not cought
+
+2)Explicict wait
+Wait applied only at targeted element, so no performacne issue
+cons:
+More code
+
+3) Fluent Wait
+Fluent wait find the webelement repetedly at regular interval of time until timeout or till the objects get found
+Bothe WebDriverWait and Fluent Wait classes implement Wait Interface
+
+
+
+
+
+
+
+
+
+
+
+
+
