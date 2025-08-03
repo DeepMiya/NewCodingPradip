@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="LoanDepartment">
+    <listeners>
+        <listener class-name="TestNG.Listeners"/>
+    </listeners>
+    <parameter name="URL" value="www.all.loan"/>
+    <test name="Personal Loan">
+        <parameter name="URL" value="www.personal.loan"></parameter>
+        <parameter name="APIKey" value="12345"></parameter>
+        <classes>
+            <class name="TestNG.CarLoan"/>
+            <class name="selenium.TestNG.TestDemo"/>
+        </classes>
+    </test>
+    <test name="easyLoan">
+        <parameter name="URL" value="www.gif.loan"></parameter>
+        <classes>
+            <class name="TestNG.Loan"/>
+        </classes>
+    </test>
+</suite>
