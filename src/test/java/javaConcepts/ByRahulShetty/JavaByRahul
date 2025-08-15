@@ -1,0 +1,658 @@
+--When should i use while loop?
+ while(boolean)//it will run till the condition becomes false
+
+ --do-while loop
+  1 loop of execution is guarantee
+  while don't have body
+
+  --Interface
+
+-all variables in Interface class are by default public in nature if we haven't defined any specifie
+-one class can implemets multiple interface classes,(to access need to create object for each interface
+-and to access method of implemeted class , create object of that class
+
+public interface class Alpha()
+{
+  public void capital();
+  public void small();
+}
+
+public Letters implements Alpha()
+{
+ psvm()
+ {
+  Alpha a=new Letters();
+  //create object of implemeted class to access implemented methods present in interface class
+
+ }
+}
+
+============Abstarction
+is a process of hiding the implementation of the details from the user,only the funtionality will be provided to the user, in other wors the user will have
+the information on what the object does instead of how it does it.
+
+Abstract classes & methods:
+Class which is declare with abstract keyword is known as abstract class in java
+It can have abstract (method with out the body ) and non abstract methods (methods with the body)
+Abstract classes achieve partial abstraction
+Interface can achieve 100 % Abstraction
+
+--methods which are within abstract class should be public/ protected
+--we can not instatiate object for abstract class,child classes are forced to implement abstarct methods of parent class
+
+====================INterface
+contains only abtract methods
+access specifieres for methods -Public
+Variables defined must be public, static, final
+To implement an interface we use implemets keyword
+
+====================Absract
+contains abstract and concrete methods
+access specifier for methods-Except private any one
+Except private variable can have any access specifier
+to implement an abstract class we use extends keword
+
+
+============================Method overloading
+public void payment(String debitCard)
+{
+}
+public void payment(String creaditCard)
+{
+}
+public void payment(String Gpay)
+{
+}
+
+---same methode name,same signature, different arguments
+=============================methode overriding
+--same methode name,same signature, same arguments within different class..(child /parent )
+
+==================================Array-
+A container which stores multiple values of same data type
+int a[]=new int[5]//declared and allocated memory
+int a[0]=2;//initialization
+
+int b[]={1,2,3,4,5}//declare and initialize ..memeory allocation is dynamic based on mentioned values
+
+Multidimensional Array:
+int a[x axis or rows][y axis or colums]
+
+find out min /max from array
+
+==================Date
+Java.util package contain
+
+Date d=new Date();
+sop(d.toString);
+
+
+================Constructor
+-name of constructor should be same as class name
+-at the time of object creation first constructor will call
+- if we not define any constructor by default there is default contructor is getting call
+
+
+===================super keyword
+to get access for parent class variables having same name use super keyword
+to get access for parent class method user super.methodeName which have same name keyword
+to get access for parent class constructor use super();
+
+=========================//this keyword demo
+
+
+
+                         package coreJava;public class thisDemo {
+
+                         int a= 2;
+
+                          public void getData()
+                          {
+                         int a= 3;
+                         int b=a+this.a;
+                         System.out.println(a);
+                         System.out.println(this.a);
+                         System.out.println(b);
+
+
+                         // this refers to curent object- object scope lies in class level
+                         }
+                         //
+
+
+                         public static void main(String[] args) {
+                         // TODO Auto-generated method stub
+
+
+
+                         thisDemo td=new thisDemo();
+                         td.getData();
+                         }
+
+                         }
+
+
+                         ======================================
+                         Static Variables ==
+                         class variables
+                         Independant on object
+                         ============================
+                         final
+                         final keyword before any variable--means we can not change its value
+                         -constant variable
+
+                         --if class is final
+                         we can not extends that class(cant inherit)
+
+                         --if methode is final
+                         we can not override it
+
+
+                         ================package
+                         Package- set of classes
+                         Class A can use the Class B by creating object --if both classes belongs to same package
+
+                         Class A can use the Class B by creating object & import package
+                          --if both classes belongs to different package
+
+                         e.g:
+                         import.packagename.classname
+
+                         ====================access modifiers
+                         public -access across all the packages
+                         private -access within classes, you can not access method or variable out side the class of same package
+                         protected - you can access those in sub classes only (other packages)
+                         access in child class even if its in other package, prerequisiste is to extends parent class which have the protected method or variable
+                         default- access anywhere within package
+                         ==================Java Collection
+                         collection of interfaces and classes which help in storing and processing data efficiently.
+                         This framework has several useful classes which have tons of useful functions which makes programmer task super easy
+
+                         List -
+                         is ordered collection, contain duplicate elements
+
+                         ArrayList
+                         LinkedList
+                         Vector
+
+                         ===ArrayList
+                         ArrayList<String> a= new ArrayList<String>;
+                         --have dynamic size by add and remove size can varry
+                         a.add("string name")-add element
+                         add(0,""stringname)
+                         a.remove(1);
+                         a.remove("Stringname")
+                         a.get(2);
+                         a.contains("testing")
+                         a.indexOf("rahul")
+                         a.isEmpty()
+                         a.size();
+
+                         --duplicate allowed
+                         --All ArrayList,LinkedList, Vector-Implementing List Interface
+                         --Array have fixed size where as arraylist can grow dynamically
+                         --you can access and insert any value in any index
+
+                         =================Set (I)
+                         -HashSet, TreeSet, LinkedHashset implements set interface
+                         -does not accept duplicate values
+                         -there is no guarantee element stored in sequesntial order. random order
+
+                         HashSet<String> hs =new HashSet<>;
+                         add();
+                         remove();
+                         isEmpty();
+                         size();
+
+                         ================Iterator
+                         Iterator<String> it=hs.iterator();//iterate each element from set
+                         //i.next();0th index
+                         //i.next();1st index
+
+                         while(i.hasext())
+                         {
+                         sop(i.next());
+                         }
+
+
+                         =======================HashMap
+                         HashMap<Integer,String> hm=new Hashmap<Integer,String>();
+                         put(key, value);
+                         get(key);
+                         remove(key);
+                         Set sn=entrySet();
+
+                         to ptint
+                         Iterator it=sn.iterator();
+                         while(it.hasNext)
+                         {
+                         sop(it.next)//will confuse which have to print key or value
+
+                         so use below
+                         Map.Entry p=(Map.Entry)it.next();
+                         mp.getKey();
+                         mp.getValue();
+                         }
+
+
+                         =========================HashTable
+                         if 5 different program working on HashMap at same time -- means not Synchronized
+
+                         The operation of first program complete and then second start --so its synchronized and tread safe as its wait to complete for complete the first thread complete
+
+                         HashMap allow one null key and multiple null values
+                         Hashtable do not allow null keys and values
+
+
+
+
+
+
+
+
+Selenium WebDriver with Java -Basics to Advanced+Frameworks
+Course image
+333. OOPS Interview questions
+Play
+322. What are Java collections
+6min
+Play
+323. Implementation of Arrays List
+11min
+Play
+324. Examples of ArrayList
+5min
+Start
+325. Array List Code download
+1min
+Start
+Coding Exercise 2: Modifying and Analyzing an ArrayList
+Play
+326. Implementation of Set interface
+8min
+Play
+327. Examples of HashSet using Iterator
+9min
+Play
+328. Implementation of Map interface
+17min
+Start
+329. Code explaining hashset and hashmap
+1min
+Play
+330. Difference between HashMap and HashTable (Interview )
+6min
+Play
+331. Practise Exercise : Priniting unique number- Amazon interview ques
+18min
+Start
+332. programming code download
+1min
+Start
+333. OOPS Interview questions
+2min
+Start
+334. Java interview questions
+1min
+
+"TOP RATED #1 Master SELENIUM java 4 (Latest) course" -5 Million students learning worldWide with great collaboration
+Rating: 4.6 out of 5
+4.6
+133,677 ratings
+437,835
+Students
+56 hours
+Total
+Last updated August 2025
+English
+English [Auto], Arabic [Auto]
+,
+information alert
+Schedule learning time
+Learning a little each day adds up. Research shows that students who make learning a habit are more likely to reach their goals. Set time aside to learn and get reminders using your learning scheduler.
+By the numbers
+Skill level: All Levels
+Students: 437835
+Languages: English
+Captions: Yes
+Lectures: 335
+Video: 56 total hours
+Certificates
+Get Udemy certificate by completing entire course
+
+Features
+Available on iOS and Android
+Coding exercises
+Description
+Course last updated on March 7th with Latest set of Selenium TestNG Framework Interview questions
+
+Have a Passion of learning Selenium but have no coding knowledge ? I will fulfill your wish with my easy teaching and life time query support  through QA Forum , Skype and Teamviewer
+
+The one and only Selenium course (350+Lectures) in Udemy which conferred with the official BEST SELLER Tag and Highest Ratings -100,000+ 5 star Ratings)
+
+Watchout Lecture 2 which depicts our roaring Success in Udemy with Success stories
+-Includes: 50+ Hours     lectures with real time projects + OnDemand Skype, Teamviewer sessions  (Life time support)  including Job Assistance    + 5 Million Students learning forum and 100 Pages detailed Material which you will not find in any other online course
+
+This course covers Java Basics core + Selenium Webdriver + Advanced Selenium + Interview Preparation + Framework design ( TestNG, ANT, Pageobject, Maven, Jenkins, Excel Datadriven, Cucumber, log4j ) + Selenium Grid + DataBase Testing + Performance Testing on Selenium scripts + Mobile testing Basics + Resume Preparation including       " Life Time Support (On Demand skype sessions) + Material + Job Assistance- (US, India, Canada
+
+*One stop to become an Expert in Selenium from scratch *
+
+I noticed other courses using the same content as our course. Please be aware of them
+
+On course completion You will be Mastered in Selenium Automation Testing and implementing Successfully in your work place or you will land on High Paying Job
+
+
+    So what makes this course Unique in the Market?
+
+We assume that students have no experience in automation / coding and start every topic from scratch and basics.
+
+Examples are taken from  REAL TIME HOSTED WEB APPLICATIONS  to understand how different components can be automated.
+
+  Topics includes:
+Complete Core java
+
+Selenium Webdriver- Major focus (20 hours+ content)
+
+ Live Examples in Automating Web applications in all supported Browsers
+
+ Strategy to handle Rich Web UI using Advanced WebDriver
+
+ Real time challenges we face in WebDriver and solutions to handle it
+
+Selenium Grid
+
+Live projects on Selenium
+
+Interview questions discussion with solutions
+
+TestNG
+
+Maven
+
+ANT
+
+Jenkins
+
+Log4j
+
+Test Execution reports
+
+Cucumber
+
+Data driven framework
+
+Hybrid Framework
+
+Page object Model Framework
+
+DataBase testing with Selenium
+
+Performance testing with Selenium
+
+Mobile Automation basics only!
+
+CLoud Automation with Sauce labs
+
+Framework Design from scratch (       TestNG, ANT, PageObject, Maven, Jenkins, Excel , Datadriven, Cucumber, log4j ,Client html reports)
+
+All the Best! Happy Testing :)
+
+What you’ll learn
+*****By the end of this course,You will be Mastered on Selenium Webdriver with strong Core JAVA basics
+****You will gain the ability to design PAGEOBJECT, DATADRIVEN&HYBRID Automation FRAMEWORKS from scratch
+*** InDepth understanding of real time Selenium CHALLENGES with 100 + examples
+*Complete knowledge on TestNG, MAVEN,ANT, JENKINS,LOG4J, CUCUMBER, HTML REPORTS,EXCEL API, GRID PARALLEL TESTING
+* Specialized Trainers who can help in answering students queries in part of your Course Journey
+"Additional knowledge to understand Mobile Testing Database testing and Performance testing with Selenium
+You will be in a position to pick any website over internet and can automate it with all the possible test cases
+You will improve your coding skills in writing best optmized code for Automating testcases
+"Last but not least" you can clear any Interview and can Lead Entire Selenium Automation Project from Design Stage
+You should be able to verify Data Integrity with the GUI of the application
+You will be able to create GREAT LOOKING REPORTS to impress Clients
+Deeper understanding of Automation guidelines and code quality standards
+Includes a Practice Website to play around with all available Web driver functions to automate
+Are there any course requirements or prerequisites?
+******You need NOT have java coding experience to start this course********* Even non Programming candidates can follow this course comfortably
+You will have Life Time instructor support to get solved all your queries. You can post your doubts in discussion board and we will get back with answer in less than 12 hours
+All Installation setup including Java knowledge is taken care as part of course
+Course includes real time projects with practical Solutions for the Robust Selenium Framework building
+Theoretical Material,Code dump and Interview Guide are available for download
+New : JOB ASSISTANCE after completion of course to make your Profile reach to Hundreds of Recruiters in my network.******
+Join in our Selenium Training community with (350 + lectures, 5 Million Students) Learning Together which you will not see in any other Selenium online course on Udemy.
+We have 5 dedicated Trainers who can help in answering students queries along with resume preparation , Interview preparation and Job assistance
+***Honored with BEST SELLER Tag by Udemy for our most trusted commitment to students***
+**"40,000+ ratings with an average 4.6/5"** which you will never see for any other course in Udemy
+Who this course is for:
+Manual testers, Non-programming aware testers interested in learning Automation
+Freshers/Graudates who want to kick start their Carrier in IT World
+Instructor
+
+Rahul Shetty Academy
+QA Instructor @ 1 Million Students| 25+ Best Selling Courses
+
+"Nothing is Impossible. It all depends on how we are Trained on it."
+
+"Teaching is my Passion. And it's my Profession. The only Business I know is Spreading Knowledge."
+
+I'm Venkatesh Chepuri (aka- Rahul Shetty), a QA instructor with a 15-year track record. Over 1 Million QA professionals from 195 countries have taken my courses on Selenium, Playwright, AI Testing, Software Testing (Jira), API Testing, Cypress, Postman, Appium, JMeter, and more..."
+
+I lead top QA initiatives both online and offline — through Rahul Shetty Academy, one of the leading EdTech platforms for QA training; QASummit, a premier offline conference brand; and RS TekSolutions, my software consulting firm. Together, these ventures have helped hundreds of thousands of students master testing and automation, transforming their careers as Automation Engineers
+
+
+
+"Many QA professionals aspire to learn cutting-edge automation, but 90% abandon their goals. It's not a lack of courses, but finding the right mentor who understands the QA mindset and tailors their teaching accordingly."
+
+"As a QA engineer with nearly two decades of experience, I get it. I've built my courses strategically, focusing on practical skills and career growth. I believe I've cracked the code for teaching automation testing, and I'm thrilled to share it with you."
+
+"My online courses are the most comprehensive available. You gain not only up-to-date, job-relevant knowledge but also a lifelong mentor who's helped countless QA engineers level up."
+
+There isn't a day when I don't receive student success emails from across the globe about landing a new job, how my courses have changed their lives and career for the better and how they are respected and appreciated at the workplace after gaining new knowledge and experience from my course.
+
+"Join my courses and gain the skills and mentorship to achieve your QA career goals!"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Teach the world online
+Create an online video course, reach students across the globe, and earn money
+Top companies choose Udemy Business to build in-demand career skills.
+NasdaqVolkswagenNetAppEventbrite
+Explore top skills and certifications
+In-demand Careers
+Data Scientist
+Full Stack Web Developer
+Cloud Engineer
+Project Manager
+Game Developer
+All Career Accelerators
+Web Development
+Web Development
+JavaScript
+React JS
+Angular
+Java
+IT Certifications
+Amazon AWS
+AWS Certified Cloud Practitioner
+AZ-900: Microsoft Azure Fundamentals
+AWS Certified Solutions Architect - Associate
+Kubernetes
+Leadership
+Leadership
+Management Skills
+Project Management
+Personal Productivity
+Emotional Intelligence
+Certifications by Skill
+Cybersecurity Certification
+Project Management Certification
+Cloud Certification
+Data Analytics Certification
+HR Management Certification
+See all Certifications
+Data Science
+Data Science
+Python
+Machine Learning
+ChatGPT
+Deep Learning
+Communication
+Communication Skills
+Presentation Skills
+Public Speaking
+Writing
+PowerPoint
+Business Analytics & Intelligence
+Microsoft Excel
+SQL
+Microsoft Power BI
+Data Analysis
+Business Analysis
+About
+About us
+Careers
+Contact us
+Blog
+Investors
+Discover Udemy
+Get the app
+Teach on Udemy
+Plans and Pricing
+Affiliate
+Help and Support
+Udemy for Business
+Udemy Business
+Legal & Accessibility
+Accessibility statement
+Privacy policy
+Sitemap
+Terms
+© 2025 Udemy, Inc.
+333. OOPS Interview questions
+OOPS Interview questions
+What are the core concepts of OOPS?
+OOPS core concepts are;
+
+Abstraction
+Encapsulation
+Polymorphism
+Inheritance
+Composition
+Association
+Aggregation
+What is Abstraction?
+Abstraction is an OOPS concept to construct the structure of the real world objects. During this construction only the general states and behaviors are taken and more specific states and behaviors are left aside for the implementers.
+
+What is Encapsulation?
+Encapsulation is an OOPS concept to create and define the permissions and restrictions of an object and its member variables and methods. A very simple example to explain the concept is to make the member variables of a class private and providing public getter and setter methods. Java provides four types of access level modifiers: public, protected, no modifier and private.
+
+What is the difference between Abstraction and Encapsulation?
+“Program to interfaces, not implementations” is the principle for Abstraction and “Encapsulate what varies” is the OO principle for Encapsulation.
+Abstraction provides a general structure of a class and leaves the details for the implementers. Encapsulation is to create and define the permissions and restrictions of an object and its member variables and methods.
+Abstraction is implemented in Java using interface and abstract class while Encapsulation is implemented using four types of access level modifiers: public, protected, no modifier and private.
+What is Polymorphism?
+Polymorphism is the occurrence of something in various forms. Java supports various forms of polymorphism like polymorphic reference variables, polymorphic method, polymorphic return types and polymorphic argument types.
+
+What is Inheritance?
+A subclass can inherit the states and behaviors of it’s super class is known as inheritance.
+
+What is multiple inheritance?
+A child class inheriting states and behaviors from multiple parent classes is known as multiple inheritance.
+
+What is the diamond problem in inheritance?
+In case of multiple inheritance, suppose class A has two subclasses B and C, and a class D has two super classes B and C.If a method present in A is overridden by both B and C but not by D then from which class D will inherit that method B or C? This problem is known as diamond problem.
+
+Why Java does not support multiple inheritance?
+Java was designed to be a simple language and multiple inheritance introduces complexities like diamond problem. Inheriting states or behaviors from two different type of classes is a case which in reality very rare and it can be achieved easily through an object association.
+
+What is Static Binding and Dynamic Binding?
+Static or early binding is resolved at compile time. Method overloading is an example of static binding.
+
+Dynamic or late or virtual binding is resolved at run time. Method overriding is an example of dynamic binding.
+
+What is a Class?
+A class is the specification or template of an object.
+
+What is an Object?
+Object is instance of class.
+
+Java interview questions
+What is Runtime Polymorphism?
+Runtime polymorphism or dynamic method dispatch is a process in which a call to an overridden method is resolved at runtime rather than at compile-time.
+
+In this process, an overridden method is called through the reference variable of a super class. The
+
+ What is the difference between abstraction and encapsulation?
+Abstraction hides the implementation details whereas encapsulation wraps code and data into a single unit.
+
+
+
+ What is abstract class?
+A class that is declared as abstract is known as abstract class. It needs to be extended and its method implemented. It cannot be instantiated.
+
+ Can there be any abstract method without abstract class?
+No, if there is any abstract method in a class, that class must be abstract.
+
+Can you use abstract and final both with a method?
+No, because abstract method needs to be overridden whereas you can't override final method.
+
+Is it possible to instantiate the abstract class?
+No, abstract class can never be instantiated.
+
+What is interface?
+
+Interface is a blueprint of a class that have static constants and abstract methods.It can be used to achieve fully abstraction and multiple inheritance.
+
+
+
+ Can you declare an interface method static?
+
+No, because methods of an interface is abstract by default, and static and abstract keywords can't be used together.
+
+ Can an Interface be final?
+No, because its implementation is provided by another class.
+
+ What is marker interface?
+An interface that have no data member and method is known as a marker interface.For example Serializable, Cloneable etc.
+
+ What is difference between abstract class and interface?
+Abstract class	Interface
+1)An abstract class can have method body (non-abstract methods).	Interface have only abstract methods.
+2)An abstract class can have instance variables.	An interface cannot have instance variables.
+3)An abstract class can have constructor.	Interface cannot have constructor.
+4)An abstract class can have static methods.	Interface cannot have static methods.
+5)You can extends one abstract class.	You can implement multiple interfaces.
+ Can we define private and protected modifiers for variables in interfaces?
+No, they are implicitly public.
+
+ When can an object reference be cast to an interface reference?
+An object reference can be cast to an interface reference when the object implements the referenced interface.
+
+Resources for this lecture
+
+
+
+
+
+
+
+
+
+
+
+
+
