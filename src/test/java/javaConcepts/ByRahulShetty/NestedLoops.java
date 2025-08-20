@@ -23,11 +23,11 @@ public class NestedLoops {
         int num = 1; // starting number
         int rows = 4; // total rows
 
-        for(int i=rows;i>0;i--)
+        for(int i=rows;i>0;i--) //decrease in order
         {
             for(int j=1;j<=i;j++)
             {
-                System.out.print(num + " ");
+                System.out.print(num + " ");//same for star pattern
                 num++;
             }
             System.out.println();

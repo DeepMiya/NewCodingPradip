@@ -26,11 +26,11 @@ package javaConcepts.Interface;
     void triangle()
     {
         System.out.println("This is triangel");
-    }
+    }//its my class methode
     public static void main(String[] args)
     {
-        /*
-        scenario 1
+
+        //scenario 1
         Implclass x=new Implclass(); //instantiate class & object reference for class
         x.circle(); //abstract
         x.square(); //default
@@ -43,9 +43,8 @@ package javaConcepts.Interface;
        it.square();
        InterfaceClasseDemo.rectangle();
        //it.triangle();// can not access, as InterfaceclassDemo does not contain triangle
-*/
-     System.out.println(InterfaceClasseDemo.length + InterfaceClasseDemo.width);//static variables access anywhere direcly
 
+     System.out.println(InterfaceClasseDemo.length + InterfaceClasseDemo.width);//static variables access anywhere direcly
 
 
     }
