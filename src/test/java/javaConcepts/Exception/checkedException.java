@@ -2,7 +2,16 @@ package javaConcepts.Exception;
 
 import java.io.FileInputStream;
 
-public class checkedException {
+public class  checkedException {
+    /*
+🔹 These are compile-time exceptions – the compiler forces you to either handle them with try-catch or declare them with throws.
+🔹 They usually represent recoverable situations (things that can be handled gracefully).
+
+Examples:
+IOException (when reading/writing files)
+SQLException (when working with databases)
+ClassNotFoundException
+     */
     public static void  main(String[] args) throws InterruptedException {//using throws
         System.out.println("Program started..........");
         Thread.sleep(5000);

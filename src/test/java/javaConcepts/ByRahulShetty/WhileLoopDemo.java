@@ -22,7 +22,7 @@ public class WhileLoopDemo {
      {
          System.out.println(j);
          j++;
-     }while(j>30);
+     }while(j>30);//while dont have body
 
  }
 }

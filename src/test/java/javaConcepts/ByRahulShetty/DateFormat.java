@@ -7,16 +7,27 @@ public class DateFormat {
 
     public static void main(String[] args)
     {
+        /*
         Date d=new Date();
-       // System.out.println(d);
+        System.out.println(d);
         System.out.println(d.toString());
 
         SimpleDateFormat sdf=new SimpleDateFormat("M/d/yyyy");
         sdf.format(d);//
         System.out.println(d.toString());
         SimpleDateFormat sd=new SimpleDateFormat("M/d/yyyy hh:mm:ss");
-        sdf.format(d);//
+        sd.format(d);//
         System.out.println(d.toString());
+*/
+        Date d = new Date();
+        System.out.println(d);
+        System.out.println(d.toString());
+
+        SimpleDateFormat sdf = new SimpleDateFormat("M/d/yyyy");
+        System.out.println(sdf.format(d)); // print formatted date
+
+        SimpleDateFormat sd = new SimpleDateFormat("M/d/yyyy hh:mm:ss");
+        System.out.println(sd.format(d)); // print formatted date-time
 
 
 

@@ -5,7 +5,7 @@ public class ChildA extends ParentP {
     public void getData()
     {
         System.out.println(name);
-        System.out.println(super.name); //variable
+        System.out.println(super.name); //parent variable
     }
     public void getId()
     {
@@ -14,7 +14,7 @@ public class ChildA extends ParentP {
     }
     public ChildA()
     {
-        super();//we user super & () for constructor calling from parent first then child
+        super();//we use super & () for constructor calling from parent first then child
         //at the time of object creation constructor will call first
         System.out.println("Child Class Constructor");
     }
