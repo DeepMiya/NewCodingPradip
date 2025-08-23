@@ -2,7 +2,7 @@ package javaConcepts;
 
 import java.util.Scanner;
 
-public class CatchBlock {
+public class  CatchBlock {
 
     public static void main(String [] args)
     {

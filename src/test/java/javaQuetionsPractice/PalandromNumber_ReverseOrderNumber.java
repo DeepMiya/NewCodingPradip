@@ -11,9 +11,9 @@ public class PalandromNumber_ReverseOrderNumber {
         int palendromNum=0;
         while(num>0)
         {
-            int i=num%10;
+            int i=num%10;//reminder
             palendromNum=(palendromNum*10)+i;
-            num=num/10;
+            num=num/10;//
         }
 
             if (actNum==palendromNum)

@@ -3,7 +3,7 @@ package javaConcepts;
 public class SearchElementInArray {
     public static void main(String[] args) {
 
-        int a[] = {10, 20, 30, 40};
+        int a[] = {10, 20, 300, 40};
 
         int search_element = 300;
         boolean status=false; //not found =false, found =true

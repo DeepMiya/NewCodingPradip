@@ -2,7 +2,7 @@ package javaConcepts;
 
 public class ClassObjectsConcept {
     /*
-    Class-- Collection of attributes (variables) and behavior (Methods)
+   Class-- Collection of attributes (variables) and behavior (Methods)
 -class is virtual or logical entity/blue print not physical
 -will not occupy space in the memory
 Animal--->dog,elephant,horse etc
