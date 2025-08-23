@@ -28,11 +28,11 @@ public class StringMethods {
 
         //substring(start index, end index)--extract substring from the main string
         //Starting index start from 0  & ending index start from 1
-
+*/
 
         String sb="welcome";
         System.out.println(sb.substring(1,4));
-*/
+
        //split()-split the string into multiple parts bases on delimiter(,. @ etc)
         String s1="abc@gmail.com";
        String [] a= s1.split("@");

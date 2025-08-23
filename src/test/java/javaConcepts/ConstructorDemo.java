@@ -1,6 +1,5 @@
 package javaConcepts;
 
-import org.checkerframework.checker.units.qual.C;
 
 public class ConstructorDemo {
     int a;
