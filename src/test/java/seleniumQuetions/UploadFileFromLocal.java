@@ -62,7 +62,6 @@ public class UploadFileFromLocal {
 
 
 
-
         //3rd Way, Using JavascriptExecutor (hidden of <input type="file">) on Hidden ele
 
                 driver.get("https://the-internet.herokuapp.com/upload");
