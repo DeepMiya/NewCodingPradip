@@ -26,7 +26,7 @@ public class DateFormat {
         SimpleDateFormat sdf = new SimpleDateFormat("M/d/yyyy");
         System.out.println(sdf.format(d)); // print formatted date
 
-        SimpleDateFormat sd = new SimpleDateFormat("M/d/yyyy hh:mm:ss");
+        SimpleDateFormat sd = new SimpleDateFormat("Mdyyyyhhmmss");
         System.out.println(sd.format(d)); // print formatted date-time
 
 
